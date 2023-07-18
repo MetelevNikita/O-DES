@@ -1,0 +1,51 @@
+.header-container {
+  width: 1180px;
+  margin:  0 auto;
+}
+
+.header-box {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {}
+
+.header-logo {}
+
+.header-right {}
+
+.header-menu {}
+
+.menu {
+  margin-left: 20px;
+  color: white;
+}
+
+.menu-item1 {}
+
+.header-line {
+  margin-top: 25px;
+  width: 1180px;
+  height: 1px;
+  background: white;
+}
+
+
+/* animation */
+
+@keyframes rotate-logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform:  rotate(360deg);
+  }
+
+}
+
+
+.header-logo {
+  animation: rotate-logo 2s;
+}
