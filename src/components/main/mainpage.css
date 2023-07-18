@@ -1,0 +1,151 @@
+.mainpage-container {
+  width: 1180px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+/*  */
+
+.mainpage-left {}
+
+.main-circle {
+  position: absolute;
+  top: 200px;
+  width: 594px;
+  height: 600px;
+  flex-shrink: 0;
+  border-radius: 600px;
+  background: rgba(217, 217, 217, 0.03);
+  box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.15) inset, 0px 0px 68px 0px rgba(255, 255, 255, 0.05) inset;
+  backdrop-filter: blur(24px);
+  z-index: 0;
+}
+
+.circle-black {
+  position: absolute;
+  top: 200px;
+  left: 450px;
+
+
+
+}
+
+.circle-blue {
+  position: absolute;
+  left: 50px;
+  top: 360px;
+  z-index: 0;
+
+
+
+}
+
+.circle-yellow {
+  position: absolute;
+  left: 360px;
+  top: 600px;
+  z-index: 0;
+
+}
+
+.mainpage-left-title {
+  position: absolute;
+  left: 80px;
+  top: 430px;
+  color: #FFF;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.mainpage-left-subtitle {
+  position: absolute;
+  top: 500px;
+  left: 140px;
+  color: #FFF;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 69px;
+
+}
+
+
+/*  */
+
+.mainpage-right {
+  position: absolute;
+  left: 600px;
+  top: 670px;
+}
+
+.mainpage-right-title {
+  width: max-content;
+  height: max-content;
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 77px; /* 385% */
+
+}
+
+.mainpage-right-subtitle {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 40px;
+}
+
+
+/* animation */
+
+
+@keyframes black-circle-move {
+  0% {
+    transform: translateY(100px);
+
+  }
+
+  100% {
+    transform: translateY(0px);
+
+  }
+}
+
+
+@keyframes yellow-circle-move {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+
+@keyframes blue-circle-move {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.circle-black {
+  animation: 50s black-circle-move forwards;
+}
+
+.circle-yellow {
+  animation:  50s yellow-circle-move forwards;
+}
+
+.circle-blue {
+  animation: 20s blue-circle-move forwards;
+}
+

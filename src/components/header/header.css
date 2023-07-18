@@ -21,11 +21,13 @@
 .menu {
   margin-left: 20px;
   color: white;
+  transition: all 0.05s ease
 }
 
 .menu-item1 {}
 
 .header-line {
+
   margin-top: 25px;
   width: 1180px;
   height: 1px;
@@ -46,6 +48,25 @@
 }
 
 
+@keyframes line-up {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 1180px;
+  }
+}
+
+
 .header-logo {
   animation: rotate-logo 2s;
 }
+
+.menu:hover {
+  color: #E5BC50;
+}
+
+.header-line {
+  animation: line-up 2s;
+}
+
