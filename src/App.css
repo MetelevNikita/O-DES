@@ -6,6 +6,8 @@ html, body {
   background:  black;
   font-family: 'Unbounded';
 
+  overflow-x: hidden;
+
 }
 
 .App {

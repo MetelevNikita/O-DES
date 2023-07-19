@@ -1,0 +1,42 @@
+.info-phone-container {}
+
+.info-text-block {}
+
+.info-text-block {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.info-title {
+  color: #E5BC50;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.info-img {
+  margin-left: 9px;
+  margin-top: 4px;
+}
+
+.info-subtitle-animation {
+  margin-top: 13px;
+}
+
+.info-subtitle {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.icon-behance {
+  margin-left: 23px;
+}
+
+.icon-vk {
+  margin-left: 23px;
+}
