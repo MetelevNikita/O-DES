@@ -1,6 +1,14 @@
 import './header.css'
 
+
+// img
+
 import logo from './../../asset/logo.svg'
+
+//
+
+
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
@@ -11,15 +19,17 @@ const Header = () => {
         <div className="header-box">
 
               <div className="header-left">
-              <img className='header-logo' src={logo} alt="logo o-des" />
+                <Link to={'/'}><img className='header-logo' src={logo} alt="logo o-des" /></Link>
             </div>
+
             <div className="header-right">
               <nav className='header-menu'>
-                <a className='menu menu-item1' href="#">О себе</a>
-                <a className='menu menu-item2' href="#">Портфолио</a>
-                <a className='menu menu-item3' href="#">Контакты</a>
+                <Link to={'/about'} className='menu menu-item1'>О себе</Link>
+                <Link to={'/portfolio'} className='menu menu-item2'>Портфолио</Link>
+                <Link to={'/contacts'} className='menu menu-item3'>Контакты</Link>
               </nav>
             </div>
+            
         </div>
 
       <hr className='header-line'/>
