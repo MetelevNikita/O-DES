@@ -25,6 +25,29 @@ const Portfolio = () => {
 
   const [title, setTitle] = useState('Брендинг')
   const [counter, setCounter] = useState(0)
+  const [link, setLink] = useState()
+  console.log(title)
+
+
+  const cotegory = [
+      {
+        title: 'Брендинг',
+        cotegory: 'branding'
+      },
+      {
+        title: 'Веб-дизайн',
+        cotegory: 'web'
+      },
+      {
+        title: 'Иллюстрации',
+        cotegory: 'illustration'
+      }
+
+  ]
+
+
+
+
 
   const sliderMove = () => {
 
@@ -39,6 +62,7 @@ const Portfolio = () => {
 
 
   sliderMove()
+
 
 
 
@@ -73,6 +97,8 @@ const Portfolio = () => {
 
 
 
+
+
   return(
     <div className="portfolio-container">
       <div className="portfolio-box">
@@ -80,11 +106,18 @@ const Portfolio = () => {
             <div className="portfolio-title">{title}</div>
         </div>
 
+        <Link>
 
-        <Link to={'/all'} className = "portfolio-look-box">
-            <div className="portfolio-look-title">Смотреть все</div>
-            <img className="portfolio-loog-img" src={arrowRight} alt="" />
+        <div className='portfolio-look-box'>
+          <div className="portfolio-look-title">Смотреть все</div>
+          <img className='portfolio-loog-img' src={arrowRight} alt="" />
+        </div>
+
+
         </Link>
+
+
+
 
         <div className="portfolio-slider-container">
           <div className="portfolio-slider-line" style={{left: counter + 'px'}}>
@@ -100,9 +133,13 @@ const Portfolio = () => {
 
         <div className="portfolio-menu">
 
-            <Mybutton  value={'Брендинг'} onClick={(e) => {setTitle(e.target.value)}}>Брендинг</Mybutton>
+            {cotegory.map((btn) => {
+              return <Mybutton onClick={(e) => {setTitle(btn.title)}}>{btn.title}</Mybutton>
+            })}
+
+            {/* <Mybutton  value={'branding'} onClick={(e) => {setTitle(e.target.value)}}>Брендинг</Mybutton>
             <Mybutton  value={'Веб-дизайн'} onClick={(e) => {setTitle(e.target.value)}}>Веб-дизайн</Mybutton>
-            <Mybutton  value={'Иллюстрации'} onClick={(e) => {setTitle(e.target.value)}}>Иллюстрации</Mybutton>
+            <Mybutton  value={'Иллюстрации'} onClick={(e) => {setTitle(e.target.value)}}>Иллюстрации</Mybutton> */}
         </div>
 
 

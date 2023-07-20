@@ -11,9 +11,13 @@ import cardServer from '../server/card-server'
 import { useState } from 'react'
 
 
-const PortfolioList = () => {
+const PortfolioList = ({cotegory}) => {
 
   const [card, setCard] = useState(cardServer)
+
+  console.log(cotegory)
+
+
 
 
   return(
