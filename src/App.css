@@ -5,6 +5,7 @@ html, body {
   height: 100%;
   background:  black;
   font-family: 'Unbounded';
+  background: url('./asset/BG\ final.png');
 
   overflow-x: hidden;
 

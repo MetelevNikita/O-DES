@@ -1,0 +1,27 @@
+.portfolio-page-hidden {
+  display: none;
+}
+
+
+.animation-hover {
+  position: absolute;
+}
+
+.animation-title {
+  position: relative;
+  bottom: 170px;
+  color: #FFF;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+}
+
+.animation-black {
+  border-radius: 25px;
+  width: 362px;
+  height: 274px;
+  background-color: rgba(0, 0, 0, 0.419);
+}

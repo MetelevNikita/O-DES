@@ -1,0 +1,29 @@
+.btn {
+  width: 362px;
+  height: 60px;
+  flex-shrink: 0;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid #FFF;
+
+}
+
+
+
+/* animation */
+
+.btn:hover {
+  color: #E5BC50;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 0px solid #FFF;
+
+  transition: 0.05s ease;
+}
+
+.btn:active {
+  transition: 0.05s;
+  transform: scale(1.10);
+}

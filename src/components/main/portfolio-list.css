@@ -1,0 +1,22 @@
+.portfolio-list {}
+
+.portfolio-list-box {}
+
+.portfolio-list-title {
+  color: #FFF;
+  font-family: Unbounded;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 47px;
+  margin-bottom: 47px;
+
+}
+
+
+.portfolio-list {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: 362px 362px 362px;
+}
