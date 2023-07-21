@@ -12,18 +12,32 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const PortfolioCard = ({}) => {
+  const params = useParams()
+  const id =  Number(params.id)
+  const [page, setPage] = useState(id)
+  const card = cardServer[page-1]
 
-  const [page, setPage] = useState(1)
-
-  const params = useParams(page)
-  const id =  params.id
-  console.log(id)
-  const card = cardServer[id]
-
+  console.log(page)
 
 
 
+  const nextPage = () => {
 
+    if(page >= cardServer.length) {
+      setPage(cardServer.length)
+    } else {
+      setPage(page + 1)
+    }
+  }
+
+
+  const previusPage = () => {
+    if(page === 1) {
+      setPage(1)
+    } else {
+      setPage(page-1)
+    }
+  }
 
 
   return(
@@ -43,8 +57,8 @@ const PortfolioCard = ({}) => {
 
 
         <div className="portfolio-card-btn-box">
-            <Mybutton onClick={() => {console.log('Назад')}}>Назад</Mybutton>
-            <Mybutton onClick={() => {console.log('Вперед')}}>Вперед</Mybutton>
+            <Mybutton onClick={() => {previusPage()}}>Назад</Mybutton>
+            <Mybutton onClick={() => {nextPage()}}>Вперед</Mybutton>
             <Link to={'/contacts'}><Mybutton>Назад</Mybutton></Link>
 
           </div>

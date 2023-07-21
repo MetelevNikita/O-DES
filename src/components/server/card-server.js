@@ -19,7 +19,9 @@ import imgPallet4 from './../../asset/pallet4.png'
 
 const cardServer = [
   {
+
     id: 1,
+    theme: 'Брендинг',
     title: 'project Branding1',
     cotegory: 'branding',
     description: 'project Branding description1',
@@ -33,7 +35,8 @@ const cardServer = [
 
   {
     id: 2,
-    title: 'project Branding1',
+    theme: 'Брендинг',
+    title: 'project Branding2',
     cotegory: 'branding',
     description: 'project Branding description1',
     imgList: brandingListImg,
@@ -46,7 +49,8 @@ const cardServer = [
 
   {
     id: 3,
-    title: 'project Branding1',
+    theme: 'Брендинг',
+    title: 'project Branding3',
     cotegory: 'branding',
     description: 'project Branding description1',
     imgList: brandingListImg,
@@ -62,6 +66,7 @@ const cardServer = [
 
   {
     id: 4,
+    theme: 'Веб-дизайн',
     title: 'project web1',
     cotegory: 'web',
     description: 'project Web description1',
@@ -75,6 +80,7 @@ const cardServer = [
 
   {
     id: 5,
+    theme: 'Веб-дизайн',
     title: 'project web2',
     cotegory: 'web',
     description: 'project Web description2',
@@ -88,6 +94,7 @@ const cardServer = [
 
   {
     id: 6,
+    theme: 'Веб-дизайн',
     title: 'project web3',
     cotegory: 'web',
     description: 'project Web description3',
@@ -100,11 +107,10 @@ const cardServer = [
   },
 
 
-
-
   {
     id: 7,
-    title: 'project Illustartion3',
+    theme: 'Иллюстрации',
+    title: 'project Illustartion1',
     cotegory: 'illustration',
     description: 'project Illustration description3',
     imgList: illustrationListItem,
@@ -117,7 +123,8 @@ const cardServer = [
 
   {
     id: 8,
-    title: 'project Illustartion3',
+    theme: 'Иллюстрации',
+    title: 'project Illustartion2',
     cotegory: 'illustration',
     description: 'project Illustration description3',
     imgList: illustrationListItem,
@@ -130,6 +137,7 @@ const cardServer = [
 
   {
     id: 9,
+    theme: 'Иллюстрации',
     title: 'project Illustartion3',
     cotegory: 'illustration',
     description: 'project Illustration description3',

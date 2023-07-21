@@ -64,7 +64,7 @@
 }
 
 .contacts-title {
-  animation: 2s title-contact-slide;
+  animation: 2s title-contact-slide ease-in-out;
 }
 
 
@@ -80,7 +80,7 @@
 
 
  .contact-img {
-  animation: 2s img-visible;
+  animation: 2s img-visible ease-in-out;
  }
 
 

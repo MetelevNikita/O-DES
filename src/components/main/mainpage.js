@@ -62,8 +62,15 @@ const Mainpage = () => {
           </defs>
         </svg>
 
-        <div className="mainpage-left-title">Дизайн</div>
-        <div className="mainpage-left-subtitle">портфолио</div>
+
+        <div className="main-left-title-animation">
+              <div className="mainpage-left-title">Дизайн</div>
+        </div>
+
+        <div className="main-left-subtitletitle-animation">
+            <div className="mainpage-left-subtitle">портфолио</div>
+        </div>
+
 
       </div>
 

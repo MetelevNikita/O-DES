@@ -10,6 +10,7 @@ import imgSlider3 from './../../asset/img-3.png'
 // components
 
 import Mybutton from './UI/Mybutton'
+import cardServer from '../server/card-server'
 
 
 
@@ -25,25 +26,24 @@ const Portfolio = () => {
 
   const [title, setTitle] = useState('Брендинг')
   const [counter, setCounter] = useState(0)
-  const [link, setLink] = useState()
-  console.log(title)
+
+  const titleTheme = () => {
+    return Array.from(new Set(cardServer.map((item) => {
+      return item.theme
+    })))
+  }
 
 
-  const cotegory = [
-      {
-        title: 'Брендинг',
-        cotegory: 'branding'
-      },
-      {
-        title: 'Веб-дизайн',
-        cotegory: 'web'
-      },
-      {
-        title: 'Иллюстрации',
-        cotegory: 'illustration'
-      }
+  const cotegoryPage = () => {
 
-  ]
+    if(title === 'Брендинг') {
+      return 'branding'
+    } else if (title === 'Веб-дизайн') {
+      return 'web'
+    } else {
+      return 'illustration'
+    }
+  }
 
 
 
@@ -62,16 +62,6 @@ const Portfolio = () => {
 
 
   sliderMove()
-
-
-
-
-
-
-
-
-
-
 
 
   const writeImg = () => {
@@ -94,11 +84,6 @@ const Portfolio = () => {
   }
 
 
-
-
-
-
-
   return(
     <div className="portfolio-container">
       <div className="portfolio-box">
@@ -106,15 +91,17 @@ const Portfolio = () => {
             <div className="portfolio-title">{title}</div>
         </div>
 
-        <Link>
+        <Link to={`/all/${cotegoryPage()}`}>
 
         <div className='portfolio-look-box'>
           <div className="portfolio-look-title">Смотреть все</div>
           <img className='portfolio-loog-img' src={arrowRight} alt="" />
         </div>
 
-
         </Link>
+
+
+
 
 
 
@@ -132,14 +119,9 @@ const Portfolio = () => {
 
 
         <div className="portfolio-menu">
-
-            {cotegory.map((btn) => {
-              return <Mybutton onClick={(e) => {setTitle(btn.title)}}>{btn.title}</Mybutton>
+            {titleTheme().map((btn, index) => {
+              return <Mybutton key={index} id={btn} onClick={(e) => {setTitle(btn)}}>{btn}</Mybutton>
             })}
-
-            {/* <Mybutton  value={'branding'} onClick={(e) => {setTitle(e.target.value)}}>Брендинг</Mybutton>
-            <Mybutton  value={'Веб-дизайн'} onClick={(e) => {setTitle(e.target.value)}}>Веб-дизайн</Mybutton>
-            <Mybutton  value={'Иллюстрации'} onClick={(e) => {setTitle(e.target.value)}}>Иллюстрации</Mybutton> */}
         </div>
 
 

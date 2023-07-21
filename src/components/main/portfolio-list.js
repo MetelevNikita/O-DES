@@ -4,56 +4,53 @@ import './portfolio-list.css'
 
 import PortfolioPage from './portfolio-list-page/portfolio-page'
 import cardServer from '../server/card-server'
+import Mybutton from './UI/Mybutton'
 
 //
 
 
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
-const PortfolioList = ({cotegory}) => {
+
+const PortfolioList = () => {
 
   const [card, setCard] = useState(cardServer)
+  const params = useParams()
+  const cotegory = params.cotegory
 
-  console.log(cotegory)
 
+  const themeTitle = () => {
+
+    if (cotegory === 'branding') {
+      return 'Брэндинг'
+    } else if (cotegory === 'web') {
+      return 'Веб-дизайн'
+    } else {
+      return 'Иллюстрации'
+    }
+  }
 
 
 
   return(
-    <dov className="portfolio-list-container">
+    <div className="portfolio-list-container">
       <div className="portfolio-list-box">
 
-        <div className="portfolio-list-title">Брэндинг</div>
+        <div className="portfolio-list-title">{themeTitle()}</div>
 
         <div className="portfolio-list">
               { card && card.map((item) => {
-                  return (item.cotegory === 'branding') ? <PortfolioPage key={item.id} id={item.id} title={item.title} img={item.imgList} ></PortfolioPage> : <></>
+                  return (item.cotegory === cotegory) ? <PortfolioPage key={item.id} id={item.id} title={item.title} img={item.imgList} ></PortfolioPage> : <></>
                 })
               }
         </div>
 
-        <div className="portfolio-list-title">Веб-Дизайн</div>
-
-        <div className="portfolio-list">
-              { card && card.map((item) => {
-                  return (item.cotegory === 'web') ? <PortfolioPage key={item.id} id={item.id} title={item.title} img={item.imgList} ></PortfolioPage> : <></>
-                })
-              }
-        </div>
-
-        <div className="portfolio-list-title">Иллюстрации</div>
-
-        <div className="portfolio-list">
-              { card && card.map((item) => {
-                  return (item.cotegory === 'illustration') ? <PortfolioPage key={item.id} id={item.id} title={item.title} img={item.imgList} ></PortfolioPage> : <></>
-                })
-              }
-        </div>
-
-
+        <Link to={'/portfolio'}><Mybutton>назад</Mybutton></Link>
       </div>
-    </dov>
+    </div>
   )
 }
 

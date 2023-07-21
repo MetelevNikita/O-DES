@@ -71,7 +71,7 @@
 }
 
 .about-title {
-  animation: 2s title-slide;
+  animation: 2s title-slide ease-in-out;
 }
 
 
@@ -85,7 +85,7 @@
 }
 
 .about-img {
-  animation: 2s img-slide;
+  animation: 2s img-slide ease-in-out;
 }
 
 
