@@ -10,7 +10,6 @@ import PortfolioList from './components/main/portfolio-list'
 import PortfolioCard from './components/main/portfolio-card/portfolio-card'
 import About from './components/main/about'
 
-
 //
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'

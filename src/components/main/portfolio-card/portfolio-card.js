@@ -26,7 +26,11 @@ const PortfolioCard = ({}) => {
     if(page >= cardServer.length) {
       setPage(cardServer.length)
     } else {
-      setPage(page + 1)
+      setPage(page+1)
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      })
     }
   }
 
@@ -36,6 +40,10 @@ const PortfolioCard = ({}) => {
       setPage(1)
     } else {
       setPage(page-1)
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      })
     }
   }
 

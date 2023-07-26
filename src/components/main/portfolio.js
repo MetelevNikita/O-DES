@@ -14,7 +14,7 @@ import cardServer from '../server/card-server'
 
 
 
-import { useState } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
 
@@ -34,6 +34,7 @@ const Portfolio = () => {
   }
 
 
+
   const cotegoryPage = () => {
 
     if(title === 'Брендинг') {
@@ -49,7 +50,7 @@ const Portfolio = () => {
 
 
 
-  const sliderMove = () => {
+  const sliderMove = (counter) => {
 
     if(counter <= -1576) {
       return setCounter(0)
@@ -61,10 +62,7 @@ const Portfolio = () => {
   }
 
 
-  sliderMove()
-
-
-  const writeImg = () => {
+  const writeImg = (title) => {
 
     if (title === 'Брендинг') {
       return imgArrBrending && imgArrBrending.map((img, index) => {
@@ -92,17 +90,11 @@ const Portfolio = () => {
         </div>
 
         <Link to={`/all/${cotegoryPage()}`}>
-
-        <div className='portfolio-look-box'>
-          <div className="portfolio-look-title">Смотреть все</div>
-          <img className='portfolio-loog-img' src={arrowRight} alt="" />
-        </div>
-
+            <div className='portfolio-look-box'>
+              <div className="portfolio-look-title">Смотреть все</div>
+              <img className='portfolio-loog-img' src={arrowRight} alt="" />
+            </div>
         </Link>
-
-
-
-
 
 
 
@@ -110,7 +102,7 @@ const Portfolio = () => {
           <div className="portfolio-slider-line" style={{left: counter + 'px'}}>
 
             {
-              writeImg()
+             writeImg(title)
             }
 
 
